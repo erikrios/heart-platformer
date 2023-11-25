@@ -1,6 +1,7 @@
-[gd_scene load_steps=13 format=3 uid="uid://dt7u4rascstes"]
+[gd_scene load_steps=14 format=3 uid="uid://dt7u4rascstes"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_1ka6k"]
+[ext_resource type="Resource" uid="uid://bu21gauh0ud42" path="res://default_movement_data.tres" id="2_b5w26"]
 [ext_resource type="Texture2D" uid="uid://d4aijr33rnc1j" path="res://assets/player.png" id="2_f5x2q"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_801ep"]
@@ -82,8 +83,9 @@ size = Vector2(10, 15)
 
 [node name="Player" type="CharacterBody2D"]
 floor_constant_speed = true
-floor_snap_length = 2.0
+floor_snap_length = 3.0
 script = ExtResource("1_1ka6k")
+movement_data = ExtResource("2_b5w26")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -10)
