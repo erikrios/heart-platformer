@@ -37,7 +37,7 @@ func handle_wall_jump() -> void:
 	var wall_normal := get_wall_normal()
 	if Input.is_action_just_pressed("ui_up"):
 		animated_sprite_2d.flip_h = wall_normal.x < 0
-		velocity.x = wall_normal.x * movement_data.speed
+		velocity.x = wall_normal.x * movement_data.speed * 1.1
 		velocity.y = movement_data.jump_velocity
 		just_wall_jumped = true
 
